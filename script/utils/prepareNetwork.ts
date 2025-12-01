@@ -14,6 +14,7 @@ export enum NETWORK {
   MATIC = 'matic',
   MONAD = 'monad',
   OPTIMISM = 'optimism',
+  PLASMA_MAINNET = 'plasma-mainnet',
   SONEIUM = 'soneium-mainnet',
   UNICHAIN = 'unichain-mainnet',
   WORLDCHAIN = 'worldchain-mainnet',

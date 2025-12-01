@@ -16,6 +16,11 @@ export const build = async (network: string, subgraphType: string): Promise<void
   const { stdout, stderr } = await exec(`graph codegen ${subgraphType}-subgraph.yaml`)
   console.log(stdout)
   console.log(stderr)
+
+  console.log(`\n Building subgraph for ${network} ${subgraphType} subgraph \n`)
+  const { stdout: buildStdout, stderr: buildStderr } = await exec(`graph build ${subgraphType}-subgraph.yaml`)
+  console.log(buildStdout)
+  console.log(buildStderr)
 }
 
 export const deploy = async (subgraphType: string): Promise<void> => {
